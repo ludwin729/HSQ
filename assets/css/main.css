@@ -180,6 +180,26 @@ h6, .body__overlay {
     color: #fff; /* Blanco para mejor contraste */
     font-size: 1.2em;
 }
+/* Para Chrome, Edge y Safari */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #29265e; /* Color del thumb */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1f1b4a; /* Color al pasar el mouse */
+}
+
+
+
 :root {
   /**  @font family declaration */
   --ff-body: "Nunito Sans", sans-serif;
