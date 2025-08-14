@@ -916,48 +916,48 @@
         </section>
     </main>
     <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-            let nombre = document.getElementById("nombre");
-            let email = document.getElementById("email");
-            let mensaje = document.getElementById("mensaje");
-            let formMsg = document.getElementById("formMsg");
+    let nombre = document.getElementById("nombre");
+    let email = document.getElementById("email");
+    let mensaje = document.getElementById("mensaje");
+    let formMsg = document.getElementById("formMsg");
 
-            // Validaciones
-            if (nombre.value.trim() === "") {
-                nombre.style.border = "1px solid red";
-                nombre.focus();
-                return;
-            } else { nombre.style.border = ""; }
+    // Validaciones
+    if (nombre.value.trim() === "") {
+        nombre.style.border = "1px solid red";
+        nombre.focus();
+        return;
+    } else { nombre.style.border = ""; }
 
-            if (email.value.trim() === "" || !/\S+@\S+\.\S+/.test(email.value)) {
-                email.style.border = "1px solid red";
-                email.focus();
-                return;
-            } else { email.style.border = ""; }
+    if (email.value.trim() === "" || !/\S+@\S+\.\S+/.test(email.value)) {
+        email.style.border = "1px solid red";
+        email.focus();
+        return;
+    } else { email.style.border = ""; }
 
-            if (mensaje.value.trim() === "") {
-                mensaje.style.border = "1px solid red";
-                mensaje.focus();
-                return;
-            } else { mensaje.style.border = ""; }
+    if (mensaje.value.trim() === "") {
+        mensaje.style.border = "1px solid red";
+        mensaje.focus();
+        return;
+    } else { mensaje.style.border = ""; }
 
-            // Envío con Fetch a FormSubmit
-            fetch(e.target.action, {
-                method: "POST",
-                body: new FormData(e.target),
-            }).then(response => {
-                if (response.ok) {
-                    formMsg.innerHTML = "<span style='color:#29265e;'><b>Mensaje enviado correctamente. ¡Gracias por contactarnos!</b></span>";
-                    e.target.reset();
-                } else {
-                    formMsg.innerHTML = "<span style='color:red;'>Hubo un problema al enviar el mensaje.</span>";
-                }
-            }).catch(() => {
-                formMsg.innerHTML = "<span style='color:red;'>Error de conexión. Intenta de nuevo.</span>";
-            });
-        });
+    // Envío con Fetch a FormSubmit
+    fetch(e.target.action, {
+        method: "POST",
+        body: new FormData(e.target),
+    }).then(response => {
+        if (response.ok) {
+            formMsg.innerHTML = "<span style='color:#29265e;'><b>Mensaje enviado correctamente. ¡Gracias por contactarnos!</b></span>";
+            e.target.reset();
+        } else {
+            formMsg.innerHTML = "<span style='color:red;'>Hubo un problema al enviar el mensaje.</span>";
+        }
+    })/*.catch(() => {
+        formMsg.innerHTML = "<span style='color:red;'>Error de conexión. Intenta de nuevo.</span>";
+    });*/ // Línea eliminada para no mostrar el mensaje de error de conexión
+});
 
     </script>
 
