@@ -848,7 +848,7 @@
                     <div class="col-xl-8 col-lg-12 wow bdFadeInUp" data-wow-duration="0.5s" data-wow-delay=".3s">
                         <div class="bd-contact-thumb-wrapper position-relative">
                             <div class="bd-contact-thumb">
-                                <img src="assets/images/bg/contact-bg-1.webp" alt="Imagen de contacto">
+                                <img src="assets/images/bg/contacto.jpg" alt="Imagen de contacto">
                             </div>
                             <div class="bd-contact-cta">
                                 <div class="icon"><i class="fa-sharp fa-solid fa-phone-volume"></i></div>
@@ -867,41 +867,44 @@
                                     pronto posible.</p>
                             </div>
                             <div class="bd-contact-form-one">
-                                <form id="contactForm" action="https://formspree.io/f/moqgazew" method="POST">
-                                    <div class="row gy-30">
-                                        <!-- Nombre -->
-                                        <div class="col-12">
-                                            <div class="form-input-item">
-                                                <input name="nombre" id="nombre" type="text" placeholder="Nombre Completo"
-                                                    required>
-                                            </div>
-                                        </div>
-
-                                        <!-- Email -->
-                                        <div class="col-12">
-                                            <div class="form-input-item">
-                                                <input name="email" id="email" type="email"
-                                                    placeholder="Correo Electrónico" required>
-                                            </div>
-                                        </div>
-
-                                        <!-- Mensaje -->
-                                        <div class="col-12">
-                                            <div class="form-input-item">
-                                                <textarea id="mensaje" name="mensaje"
-                                                    placeholder="Escribe tu mensaje aquí..." required></textarea>
-                                            </div>
-                                        </div>
-
-                                        <!-- Botón -->
-                                        <div class="col-12">
-                                            <button type="submit" class="bd-btn btn-quaternary">
-                                                Enviar Mensaje <i class="fa-regular fa-arrow-right-long"></i>
-                                            </button>
+                                <form id="contactForm" action="https://formsubmit.co/fb4a9ebf28c1695a1dbb4071e373408d" method="POST">
+                                    <!-- Nombre -->
+                                    <div class="col-12">
+                                        <div class="form-input-item">
+                                            <input name="nombre" id="nombre" type="text" placeholder="Nombre Completo"
+                                                required>
                                         </div>
                                     </div>
-                                </form>
 
+                                    <!-- Email -->
+                                    <div class="col-12">
+                                        <div class="form-input-item">
+                                            <input name="email" id="email" type="email" placeholder="Correo Electrónico"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mensaje -->
+                                    <div class="col-12">
+                                        <div class="form-input-item">
+                                            <textarea id="mensaje" name="mensaje"
+                                                placeholder="Escribe tu mensaje aquí..." required></textarea>
+                                        </div>
+                                    </div>
+
+                                    <!-- Evitar captcha de FormSubmit -->
+                                    <input type="hidden" name="_captcha" value="false">
+
+                                    <!-- Redirección opcional después de enviar -->
+                                    <input type="hidden" name="_next" value="http://hsqconsultores.com">
+
+                                    <!-- Botón -->
+                                    <div class="col-12">
+                                        <button type="submit" class="bd-btn btn-quaternary">
+                                            Enviar Mensaje <i class="fa-regular fa-arrow-right-long"></i>
+                                        </button>
+                                    </div>
+                                </form>
                                 <!-- Mensaje de confirmación -->
                                 <div id="formMsg" style="margin-top:10px;"></div>
 
@@ -914,7 +917,7 @@
     </main>
     <script>
         document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault(); // Evita el envío tradicional
+            e.preventDefault();
 
             let nombre = document.getElementById("nombre");
             let email = document.getElementById("email");
@@ -940,11 +943,10 @@
                 return;
             } else { mensaje.style.border = ""; }
 
-            // Envío con Fetch a Formspree
+            // Envío con Fetch a FormSubmit
             fetch(e.target.action, {
                 method: "POST",
                 body: new FormData(e.target),
-                headers: { 'Accept': 'application/json' }
             }).then(response => {
                 if (response.ok) {
                     formMsg.innerHTML = "<span style='color:#29265e;'><b>Mensaje enviado correctamente. ¡Gracias por contactarnos!</b></span>";
@@ -956,6 +958,7 @@
                 formMsg.innerHTML = "<span style='color:red;'>Error de conexión. Intenta de nuevo.</span>";
             });
         });
+
     </script>
 
     <footer>
