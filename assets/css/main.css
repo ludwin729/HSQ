@@ -175,6 +175,11 @@ h6, .body__overlay {
     color: #fff; /* Blanco para mejor contraste */
     font-size: 1.2em;
 }
+/* Contraste para el ícono fa-circle-check en fondo azul */
+.bd-service-area .fa-circle-check {
+    color: #fff; /* Blanco para mejor contraste */
+    font-size: 1.2em;
+}
 :root {
   /**  @font family declaration */
   --ff-body: "Nunito Sans", sans-serif;
