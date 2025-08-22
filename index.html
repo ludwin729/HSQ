@@ -121,29 +121,30 @@
         x.parentNode.insertBefore(s, x);
     </script>
 
-<div id="loading">
-    <div id="loading-center">
-        <div id="loading-center-absolute">
-            <div class="bd-preloader-content">
-                <div class="bd-preloader-logo">
-                    <div class="bd-preloader-circle">
-                        <svg width="300" height="300" viewBox="0 0 380 380" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle stroke="#DFE0E0" cx="190" cy="190" r="180" stroke-width="6"
-                                stroke-linecap="round">
-                            </circle>
-                            <circle stroke="#29265e" cx="190" cy="190" r="180" stroke-width="6"
-                                stroke-linecap="round">
-                            </circle>
-                        </svg>
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="bd-preloader-content">
+                    <div class="bd-preloader-logo">
+                        <div class="bd-preloader-circle">
+                            <svg width="300" height="300" viewBox="0 0 380 380" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle stroke="#DFE0E0" cx="190" cy="190" r="180" stroke-width="6"
+                                    stroke-linecap="round">
+                                </circle>
+                                <circle stroke="#29265e" cx="190" cy="190" r="180" stroke-width="6"
+                                    stroke-linecap="round">
+                                </circle>
+                            </svg>
+                        </div>
+                        <img src="assets/images/logo/preloader-icon.png" alt="Icono HSQ"
+                            style="width: 80px; height: 80px;">
                     </div>
-                    <img src="assets/images/logo/preloader-icon.png" alt="Icono HSQ" style="width: 80px; height: 80px;">
+                    <p class="bd-preloader-subtitle">HSQ CONSULTORES</p>
                 </div>
-                <p class="bd-preloader-subtitle">HSQ CONSULTORES</p>
             </div>
         </div>
     </div>
-</div>
     <header>
         <div class="bd-header-top">
             <div class="bd-header-top-left">
@@ -278,7 +279,7 @@
                     <div class="swiper-slide">
                         <div class="bd-hero-wrapper">
                             <div class="bd-hero-thumb"
-                                data-background="assets/images/banner/banner-2/1 .jpg">
+                                data-background="assets/images/banner/banner-2/IMG-20250809-WA0006.jpg">
                             </div>
                             <div class="bd-hero-content-wrapper">
                                 <div class="container">
@@ -310,7 +311,7 @@
                     <div class="swiper-slide">
                         <div class="bd-hero-wrapper">
                             <div class="bd-hero-thumb"
-                                data-background="assets/images/banner/banner-2/2.jpg">
+                                data-background="assets/images/banner/banner-2/IMG-20250809-WA0008.jpg">
                             </div>
                             <div class="bd-hero-content-wrapper">
                                 <div class="container">
@@ -457,6 +458,11 @@
                                 aria-controls="homologation-pane" aria-selected="false">Homologación</button>
                         </div>
                         <div class="nav-item" role="presentation">
+                            <button class="nav-link" id="matpel-tab" data-bs-toggle="tab" data-bs-target="#matpel-pane"
+                                type="button" role="tab" aria-controls="matpel-pane" aria-selected="false">Capacitación
+                                MATPEL</button>
+                        </div>
+                        <div class="nav-item" role="presentation">
                             <button class="nav-link" id="management-tab" data-bs-toggle="tab"
                                 data-bs-target="#management-pane" type="button" role="tab"
                                 aria-controls="management-pane" aria-selected="false">Sistemas de Gestión</button>
@@ -471,7 +477,7 @@
                         aria-labelledby="monitoring-tab" tabindex="0">
                         <div class="row pt-20 gy-30 align-items-center">
                             <div class="col-lg-6">
-                                <img class="w-100" style="border-radius: 16px;" src="assets/images/service/1.jpg"
+                                <img class="w-100" style="border-radius: 16px;" src="assets/images/banner/banner-2/monitoreo.webp"
                                     alt="Monitoreo Ocupacional">
                             </div>
                             <div class="col-lg-6">
@@ -572,6 +578,38 @@
                         </div>
                     </div>
 
+                    <div class="tab-pane fade" id="matpel-pane" role="tabpanel" aria-labelledby="matpel-tab"
+                        tabindex="0">
+                        <div class="row pt-20 gy-30 align-items-center">
+                            <div class="col-lg-6">
+                                <img class="w-100" style="border-radius: 16px;" src="assets/images/service/1.jpg"
+                                    alt="Capacitación MATPEL">
+                            </div>
+                            <div class="col-lg-6">
+                                <h3 class="bd-section-title white-text small mb-25">Capacitación en Manejo de Materiales
+                                    Peligrosos (MATPEL)</h3>
+                                <p class="white-text-7">
+                                    Brindamos capacitación especializada en el manejo seguro de materiales peligrosos
+                                    (MATPEL), cumpliendo con la normativa vigente y los estándares internacionales.
+                                    Nuestro programa está dirigido a empresas que requieren formación para la
+                                    manipulación, almacenamiento y transporte de sustancias peligrosas.
+                                </p>
+                                <div class="bd-details-section-list white-text-7">
+                                    <ul>
+                                        <li><i class="fa-sharp fa-regular fa-circle-check"></i> Formación teórica y
+                                            práctica en manejo seguro.</li>
+                                        <li><i class="fa-sharp fa-regular fa-circle-check"></i> Cumplimiento de
+                                            requisitos legales y normativos.</li>
+                                        <li><i class="fa-sharp fa-regular fa-circle-check"></i> Certificación para
+                                            personal autorizado.</li>
+                                    </ul>
+                                </div>
+                                <a class="bd-btn btn-secondary mt-40" href="#contacto">Solicitar Capacitación <i
+                                        class="fa-regular fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="tab-pane fade" id="management-pane" role="tabpanel" aria-labelledby="management-tab"
                         tabindex="0">
                         <div class="row pt-20 gy-30 align-items-center">
@@ -584,8 +622,7 @@
                                     Gestión</h3>
                                 <p class="white-text-7">Asesoramos a entidades gubernamentales y empresas privadas en la
                                     implementación de Sistemas de Gestión basados en normas internacionales (ISO 9001,
-                                    ISO
-                                    14001, ISO 45001). Nuestro objetivo es optimizar procesos, mejorar la eficiencia y
+                                    ISO 14001, ISO 45001, ISO 37001 y ISO 39001). Nuestro objetivo es optimizar procesos, mejorar la eficiencia y
                                     promover
                                     la transparencia.</p>
                                 <div class="bd-details-section-list white-text-7">
