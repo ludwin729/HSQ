@@ -3242,6 +3242,7 @@ p:last-child {
   opacity: 0.5;
   font-size: 32px;
 }
+
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 575px) {
   .bd-search-input input::placeholder {
     font-size: 20px;
@@ -13094,3 +13095,30 @@ input[type=radio] ~ label::after {
   border-radius: 0;
 }
 /*# sourceMappingURL=../maps/main.css.map */
+/* Agregado para mejorar visibilidad del hero en pantallas bajas */
+@media (max-height: 800px) {
+  .bd-hero-area {
+    min-height: 100vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .bd-hero-content-wrapper .container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .bd-hero-title {
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+  }
+  .bd-hero-desc {
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 14px !important;
+  }
+  .bd-hero-btn {
+    margin-top: 10px !important;
+  }
+}
