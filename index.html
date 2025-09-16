@@ -80,6 +80,25 @@
     <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css">
     <link rel="stylesheet" href="assets/css/vendor/spacing.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* Personalización para el carrusel de remediación ambiental */
+        .remediationCarousel .swiper-button-next,
+        .remediationCarousel .swiper-button-prev {
+            color: #29265e !important;
+        }
+        .remediationCarousel .swiper-button-next:after,
+        .remediationCarousel .swiper-button-prev:after {
+            color: #29265e !important;
+        }
+        .remediationCarousel .swiper-pagination-bullet {
+            background: #29265e !important;
+            opacity: 0.5;
+        }
+        .remediationCarousel .swiper-pagination-bullet-active {
+            background: #29265e !important;
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -619,8 +638,21 @@
                         tabindex="0">
                         <div class="row pt-20 gy-30 align-items-center">
                             <div class="col-lg-6">
-                                <img class="w-100" style="border-radius: 16px;" src="assets/images/service/remediacionambiental1.jpg"
-                                    alt="Remediación Ambiental">
+                                <div class="swiper remediationCarousel">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img class="w-100" style="border-radius: 16px;" src="assets/images/service/remediacionambiental1.jpg"
+                                                alt="Remediación Ambiental 1">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img class="w-100" style="border-radius: 16px;" src="assets/images/service/remediacionambiental2.jpg"
+                                                alt="Remediación Ambiental 2">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                    <div class="swiper-button-next"></div>
+                                    <div class="swiper-button-prev"></div>
+                                </div>
                             </div>
                             <div class="col-lg-6">
                                 <h3 class="bd-section-title white-text small mb-25">Remediación Ambiental y Recuperación de Sitios Contaminados</h3>
@@ -1176,6 +1208,24 @@
     <script src="assets/js/vendor/purecounter.js"></script>
     <script src="assets/js/vendor/backtotop.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Inicializar carrusel de remediación ambiental
+        var remediationSwiper = new Swiper('.remediationCarousel', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
 
 </html>
